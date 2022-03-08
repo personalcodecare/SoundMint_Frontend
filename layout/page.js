@@ -8,6 +8,7 @@ import NounsAuctionHouseABI from "../artifacts/contracts/NounsAuctionHouse.json"
 import Web3 from "web3";
 import Router from "next/router";
 import Notify from "bnc-notify";
+import VinylABI from "../artifacts/contracts/vinyl.json";
 
 const Navbar = dynamic(() => import("../components/shared/navbar"));
 const Footer = dynamic(() => import("../components/shared/footer"));
@@ -22,6 +23,7 @@ const Page = ({ children }) => {
   const [nounsAuctionHouse, setNounsAuctionHouse] = useState(null);
   const [web3, setWeb3] = useState(null);
   const [notify, setNotify] = useState(null);
+  const [vinylMinter, setVinylMinter] = useState(null);
 
   useEffect(() => {
     const init = async () => {
@@ -45,12 +47,17 @@ const Page = ({ children }) => {
         NounsAuctionHouseABI,
         process.env.NOUNS_AUCTION_HOUSE_CONTRACT_ADDRESS
       );
+      const vinylminter = new web3.eth.Contract(
+        VinylABI,
+        '0xdCd532368eEaf94EB3489274D5b258a346e1FEE3' // process.env.VINYL_MINT_CONTRACT_ADDRESS
+      );
 
       setWeb3(web3);
       setMinter(minter);
       setBaseToken(baseToken);
       setNounsAuctionHouse(nounsAuctionHouse);
       setNotify(notify);
+      setVinylMinter(vinylminter);
     };
 
     init();
@@ -133,6 +140,7 @@ const Page = ({ children }) => {
               nounsAuctionHouse,
               web3,
               notify,
+              vinylMinter
             }}
           >
             <div>

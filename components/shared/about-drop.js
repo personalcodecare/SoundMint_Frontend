@@ -169,6 +169,7 @@ const HomeAbout = ({ showLearnBtn }) => {
       await library.eth
         .sendTransaction(tx)
         .on("transactionHash", function (hash) {
+          console.log("transactionHash--", hash);
           notify.hash(hash);
         });
     } catch (ex) {

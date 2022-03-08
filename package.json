@@ -21,7 +21,9 @@
     "formik": "^2.2.9",
     "framer-motion": "^5.3.3",
     "graphql": "^16.2.0",
+    "keccak256": "^1.0.6",
     "letterizejs": "^2.0.1",
+    "merkletreejs": "^0.2.30",
     "next": "11.1.0",
     "next-transpile-modules": "^9.0.0",
     "react": "17.0.2",
@@ -32,7 +34,8 @@
     "react-toastify": "^8.1.0",
     "sass": "^1.49.8",
     "wavesurfer.js": "^5.2.0",
-    "web3": "^1.6.1"
+    "web3": "^1.6.1",
+    "web3-utils": "^1.6.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",

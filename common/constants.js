@@ -19,7 +19,7 @@ export const componentNames = {
 };
 
 export const injected = new InjectedConnector({
-  supportedChainIds: [1,5],
+  supportedChainIds: [1,3,4,5],
 });
 
 export const showError = (message) => {

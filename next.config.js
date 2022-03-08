@@ -20,5 +20,6 @@ module.exports = withTM({
     TO_EMAIL: process.env.TO_EMAIL,
     THEGRAPH_ENDPOINT: process.env.THEGRAPH_ENDPOINT,
     ETHERSCAN_URL: process.env.ETHERSCAN_URL,
+    VINYL_CONTRACT_ADDRESS: process.env.VINYL_CONTRACT_ADDRESS
   },
 });
